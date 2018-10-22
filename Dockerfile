@@ -7,7 +7,7 @@ WORKDIR /photon
 RUN wget http://photon.komoot.de/data/photon-0.2.7.jar
 
 #RUN wget -O - http://download1.graphhopper.com/public/photon-db-latest.tar.bz2 | bzip2 -cd | tar x
-CMD java -jar photon-0.2.7.jar -nominatim-import -host $NOMINATIM_ADDR -port $NOMINATIM_PORT
+#CMD java -jar photon-0.2.7.jar -nominatim-import -host $NOMINATIM_ADDR -port $NOMINATIM_PORT
 
 EXPOSE 2322
 
