@@ -1,4 +1,4 @@
-FROM elasticsearch:5.2.1-alpine
+FROM elasticsearch:5.6.16-alpine
 
 ADD . /photon
 
@@ -9,9 +9,6 @@ RUN   apk update \
   &&   update-ca-certificates
 
 RUN wget https://github.com/komoot/photon/releases/download/0.3.1/photon-0.3.1.jar
-
-#RUN wget -O - http://download1.graphhopper.com/public/photon-db-latest.tar.bz2 | bzip2 -cd | tar x
-#CMD java -jar photon-0.3.0.jar -nominatim-import -host $NOMINATIM_ADDR -port $NOMINATIM_PORT
 
 EXPOSE 2322
 
