@@ -14,7 +14,7 @@ RUN wget https://github.com/komoot/photon/releases/download/0.3.2/photon-0.3.2.j
 
 RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.0.tar.gz -O elasticsearch-5.6.0.tar.gz
 
-RUN tar -xf  elasticsearch-5.6*.tar.gz -C /usr/local/ \
+RUN tar -xf elasticsearch-5.6*.tar.gz -C /usr/local/ \
     && mv /usr/local/elasticsearch-5.6* /usr/local/elasticsearch \
     && mkdir /usr/local/elasticsearch/logs \
     && mkdir /usr/local/elasticsearch/data \
