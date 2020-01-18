@@ -25,13 +25,7 @@ RUN tar -xf  elasticsearch-5.6*.tar.gz -C /usr/local/ \
 
 USER elasticsearch
 
-CMD ["/usr/local/elasticsearch/bin/elasticsearch",
- "-Ecluster.name=es-cluster",
-  "-Enode.name=${HOSTNAME}",
-   "-Epath.data=/usr/local/elasticsearch/data",
-    "-Epath.logs=/usr/local/elasticsearch/logs",
-     "-Enetwork.host=0.0.0.0",
-      "-Ediscovery.zen.ping.unicast.hosts=es-master"]
+CMD ["/usr/local/elasticsearch/bin/elasticsearch", "-Ecluster.name=es-cluster", "-Enode.name=${HOSTNAME}", "-Epath.data=/usr/local/elasticsearch/data", "-Epath.logs=/usr/local/elasticsearch/logs", "-Enetwork.host=0.0.0.0", "-Ediscovery.zen.ping.unicast.hosts=es-master"]
 
 EXPOSE 2322
 
